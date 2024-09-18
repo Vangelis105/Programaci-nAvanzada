@@ -1,12 +1,12 @@
 import random
 
 class Paciente:
-    id = 0
-    nombre = ""
-    ano_nacimiento = 0
-    peso = 0
-    estatura = 0
-    direccion = ""
+    id: int
+    nombre: str
+    ano_nacimiento: int
+    peso: float
+    estatura: float
+    direccion: str
 
     def __init__(self, nombre, ano_nacimiento, peso, estatura, direccion):
         self.id = random.randint(1, 10001)

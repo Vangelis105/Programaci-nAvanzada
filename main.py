@@ -40,7 +40,7 @@ while True:
         
 
     elif opcion_usuario == "2":
-        print("\n+++ Registrar medico +++")
+        print("\n+++ Registrar médico +++")
         nombre = input("Ingresa el nombre: ")
         ano_nacimiento = int(input("Ingresa el ano de nacimiento: "))
         rfc = input("Ingresa el RFC: ")

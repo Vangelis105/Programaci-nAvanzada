@@ -26,11 +26,11 @@ class Menu:
             else: 
                 if usuario.rol == Rol.ESTUDIANTE:
                     print("ERES ESTUDIANTE")
-                    self.mostrar_menu_estudiante()
+                    self.mostrar_menu_Estudiante(usuario)
                     intentos = 0
                 elif usuario.rol == Rol.MAESTRO:
                     print("ERES MAESTRO")
-                    self.mostrar_menu_maestro()
+                    self.mostrar_menu_Maestro(usuario)
                     intentos = 0
 
                 else:
@@ -42,7 +42,7 @@ class Menu:
         print("Nombre o contraseña incorrecta. Intenta de nuevo")
         return intentos + 1   
 
-    def mostrar_menu_estudiante(self):
+    def mostrar_menu_Estudiante(self, usuario):
         opcion = 0
         while opcion != 4:
             print("\n\t *** Menu de estudiante ***")
@@ -53,16 +53,15 @@ class Menu:
             
             opcion = int(input("Ingresa una opcion"))
             if opcion == 3:
-                pass
-
+                print(usuario.mostrar_info_estudiante())
             elif opcion == 4:
                 break
 
-    def mostrar_menu_maestro(self):
+    def mostrar_menu_Maestro(self, usuario):
         print("\n\t *** Menu de maestro ***")
         opcion = 0
         while opcion != 4:
-            print("\n\t *** Menu de estudiante ***")
+            print("\n\t *** Menu de maestro ***")
             print("1. Ver horario")
             print("2. Mostrar materias")
             print("3. Ver mi informacion")
@@ -70,12 +69,10 @@ class Menu:
             
             opcion = int(input("Ingresa una opcion"))
             if opcion == 3:
-                self.escuela.listar_estudiantes()
-                
-
+                print(usuario.mostrar_info_maestro())
+        
             elif opcion == 4:
                 break    
-
 
     def mostrar_menu(self):
 

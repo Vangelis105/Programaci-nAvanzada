@@ -14,3 +14,5 @@ class Usuario:
         self.apellido = apellido
         self.contraseña = contraseña
         self.rol = rol
+        
+ 

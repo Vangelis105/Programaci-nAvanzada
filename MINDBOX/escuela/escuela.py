@@ -61,17 +61,7 @@ class Escuela:
 
         for estudiante in self.lista_estudiantes:
             print(estudiante.mostrar_info_estudiante())
-
-    def mostrar_mi_info_estudiante(self):
-        print("MI INFORMACION")
-        for estudiante in self.lista_estudiantes:
-            for usuario in self.lista_usuarios:
-                if estudiante.numero_control == usuario.numero_control:
-                   print(estudiante.mostrar_info_estudiante())
-                else:
-                    print("error") 
- 
-
+                  
     def listar_maestros(self):
         print("\n\t+++ MAESTROS +++")
 
